@@ -1,0 +1,15 @@
+@mixin flex($verticalAxis, $horizonAxis, $direction, $basis, $grow, $shrink, $wrap, $gap: 0px) {
+  display: flex;
+  align-items: $verticalAxis;
+  justify-content: $horizonAxis;
+  flex-direction: $direction;
+  flex-basis: $basis;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin background($backgroundColor) {
+  background-color: $backgroundColor;
+}

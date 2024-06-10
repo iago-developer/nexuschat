@@ -1,0 +1,156 @@
+@import '_mixins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  @include background(#1e1e1e);
+  color: #f2f2f2;
+}
+
+.container {
+  width: 100%;
+  height: 100dvh;
+  @include flex(center, center, column, auto, 0, 1, nowrap, 0);
+}
+
+.header {
+  background-color: #212121;
+  color: #f2f2f2;
+  padding: 10px;
+  @include flex(center, center, row, auto, 0, 1, nowrap, 0);
+}
+
+.login {
+  width: 100%;
+  max-width: 330px;
+  background-color: #212121;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.login > h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.formLogin {
+  @include flex(stretch, start, column, auto, 0, 1, nowrap, 15px);
+}
+
+.inputForm {
+  border: none;
+  padding: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #121212;
+  color: #f2f2f2;
+  outline: none;
+  border-radius: 5px;
+}
+
+.inputForm:focus {
+  outline: 2px solid #f2f2f2;
+}
+
+.botaoForm {
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: #ddd;
+  cursor: pointer;
+  color: #121212;
+}
+
+.botaoForm:hover {
+  background-color: #fff;
+}
+
+.chat {
+  background-color: #555;
+  width: 100%;
+  height: 100%;
+  /*@include flex(space-between, start, column, auto, 0, 1, nowrap, 0);*/
+  display: none;
+}
+
+
+.formChat {
+  background-color: #191919;
+  padding: 15px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  @include flex(center, start, row auto, 0, 1, nowrap, 10px);
+}
+
+.chatFormInput {
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #212121;
+  outline: none;
+  color: #f2f2f2;
+  font-size: 1rem;
+  @include flex(stretch, start, row, auto, 1, 1, nowrap, 0);
+}
+
+.botaoChat {
+  border: none;
+  background: none;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+.botaoChat > span {
+  font-size: 1.8rem;
+}
+
+.chatMessages {
+  padding: 30px 30px 90px;
+  @include flex(start, flex-end, column, auto, 1, 1, nowrap, 0);
+}
+
+.message-self {
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 22px;
+  background-color: #f2f2f2;
+  color: #121212;
+  border-radius: 10px 10px 0px 10px;
+  align-self: flex-end;
+}
+
+.message-other {
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 22px;
+  background-color: #333;
+  color: #f2f2f2;
+  border-radius: 0px 10px 10px 10px;
+  align-self: flex-start;
+}
+
+.message-sender {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: cadetblue;
+}
